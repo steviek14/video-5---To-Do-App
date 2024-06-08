@@ -1,0 +1,62 @@
+<!--To-Do App-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class = "container"> 
+<!--a form that the user can input a new to-do list-->
+    <br>
+    <div class = "card"> <!--card is a bootstrap component that adds style to the div-->
+        <div class = "card-body">
+            <div class="row"> <!-- row 1 -->
+                <div class = "col-sm"> <!-- Column for Start Date-->
+                    <div class = "form-group">
+                        <label for = "new-start-date">Start Date</label>
+                        <input type = "date" class="form-control" id="new-start-date">
+                    </div>
+                </div>
+                <div class = "col-sm"> <!--Column for End Date-->
+                    <div class = "form-group">
+                        <label for = "new-end-date">End Date</label> <!--label for end date column-->
+                        <input type = "date" class="form-control" id="new-end-date"> <!--input for end date-->
+                    </div>
+                </div>
+            </div>
+            <div class = "row"> <!-- row 2 -->
+                <div class="col-sm"> <!--Column for Task -->
+                    <div class = "form-group">
+                        <label for = "new-task">Task</label> <!--label for Task columnm -->
+                        <input type = "text" class="form-control" id="new-task" placeholder="Task"> <!--input bar for task -->
+                    </div>
+                </div>
+            </div>
+            <div> <!--Button to hit create for task input bar -->
+                <button id="add" class="btn btn-primary form-control">Create</button>
+            </div>
+        </div>
+    </div>
+
+<!--Create a table for input from form above to go into -->
+<table id="list" class ="table table-dark table-stripe">
+    <tr> <!-- 1 row across with headers-->
+        <th>Task</th>
+        <th>Date Created</th>
+        <th>Start Date</th>
+        <th>Due Date</th>
+        <th>Actions</th>
+    </tr>
+</table>
+  
+
+
+<!--Scripts-->
+    <script src="node_modules/jquery/dist/jquery.js"> </script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="todo.js"></script>
+
+</body>
+</html>
